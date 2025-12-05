@@ -593,4 +593,599 @@
     }
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8f456a568d74d8',t:'MTc2NDg5MjkwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+        </html>
+    .image-caption p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* الأنيميشن */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);<DOCTYPE html!>
+<html lang="ar" dir="rtl">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض الديلر</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* صفحة الدخول */
+    .entry-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .entry-page h1 {
+      font-size: 64px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 1s ease;
+    }
+
+    .entry-page p {
+      font-size: 24px;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease 0.3s backwards;
+    }
+
+    .enter-btn {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border: none;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease 0.6s backwards;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245, 87, 108, 0.6);
+    }
+
+    /* صفحة المعرض */
+    .gallery-page {
+      display: none;
+      padding: 40px 20px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .gallery-page.active {
+      display: block;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .gallery-header h1 {
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-header p {
+      font-size: 20px;
+      color: #e0e0e0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .image-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease backwards;
+    }
+
+    .image-card:nth-child(1) { animation-delay: 0.1s; }
+    .image-card:nth-child(2) { animation-delay: 0.2s; }
+    .image-card:nth-child(3) { animation-delay: 0.3s; }
+    .image-card:nth-child(4) { animation-delay: 0.4s; }
+    .image-card:nth-child(5) { animation-delay: 0.5s; }
+    .image-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .image-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-card:nth-child(2) .image-wrapper {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .image-card:nth-child(3) .image-wrapper {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .image-card:nth-child(4) .image-wrapper {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+
+    .image-card:nth-child(5) .image-wrapper {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    }
+
+    .image-card:nth-child(6) .image-wrapper {
+      background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    }
+
+    svg {
+      width: 70%;
+      height: 70%;
+    }
+
+    .image-caption {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-caption h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* الموبايل */
+    @media (max-width: 768px) {
+      .entry-page h1 {
+        font-size: 42px;
+      }
+
+      .entry-page p {
+        font-size: 18px;
+      }
+
+      .enter-btn {
+        padding: 15px 40px;
+        font-size: 20px;
+      }
+
+      .gallery-header h1 {
+        font-size: 36px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- صفحة الدخول -->
+  <main class="entry-page" id="entryPage">
+   <h1>🚗 معرض الديلر 🚗</h1>
+   <p>مرحباً بك في معرضنا المميز</p><button class="enter-btn" onclick="enterGallery()">ادخل للمعرض ←</button>
+  </main><!-- صفحة المعرض -->
+  <section class="gallery-page" id="galleryPage">
+   <header class="gallery-header">
+    <h1>معرض الصور</h1>
+    <p>استمتع بمشاهدة مجموعتنا المميزة</p>
+   </header>
+   <div class="gallery-grid"><!-- صورة 1 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="70" width="120" height="60" rx="30" fill="#FFD700" /> <circle cx="70" cy="90" r="12" fill="#333" /> <circle cx="130" cy="90" r="12" fill="#333" /> <path d="M 75 110 Q 100 125 125 110" stroke="#333" stroke-width="3" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 1</h3>
+      <p>تصميم احترافي وجذاب</p>
+     </div>
+    </article><!-- صورة 2 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><polygon points="100,30 40,170 160,170" fill="#FF6B6B" /> <circle cx="85" cy="110" r="8" fill="white" /> <circle cx="115" cy="110" r="8" fill="white" /> <path d="M 80 135 Q 100 145 120 135" stroke="white" stroke-width="3" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 2</h3>
+      <p>ألوان زاهية وجميلة</p>
+     </div>
+    </article><!-- صورة 3 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="70" fill="#4ECDC4" /> <circle cx="80" cy="90" r="10" fill="#1A535C" /> <circle cx="120" cy="90" r="10" fill="#1A535C" /> <ellipse cx="100" cy="120" rx="25" ry="15" fill="#1A535C" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 3</h3>
+      <p>تصميم عصري وحديث</p>
+     </div>
+    </article><!-- صورة 4 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="80" height="80" rx="15" fill="#95E1D3" /> <circle cx="85" cy="90" r="8" fill="#2C3E50" /> <circle cx="115" cy="90" r="8" fill="#2C3E50" /> <rect x="90" y="110" width="20" height="15" fill="#F38181" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 4</h3>
+      <p>إبداع وابتكار</p>
+     </div>
+    </article><!-- صورة 5 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 40 L 130 80 L 180 90 L 140 130 L 150 180 L 100 155 L 50 180 L 60 130 L 20 90 L 70 80 Z" fill="#FFC107" /> <circle cx="100" cy="95" r="25" fill="#FF5722" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 5</h3>
+      <p>تميز وجودة عالية</p>
+     </div>
+    </article><!-- صورة 6 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="110" rx="60" ry="70" fill="#9B59B6" /> <circle cx="85" cy="95" r="10" fill="white" /> <circle cx="115" cy="95" r="10" fill="white" /> <circle cx="85" cy="95" r="5" fill="#34495E" /> <circle cx="115" cy="95" r="5" fill="#34495E" /> <path d="M 80 125 Q 100 140 120 125" stroke="white" stroke-width="4" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 6</h3>
+      <p>روعة في التصميم</p>
+     </div>
+    </article>
+   </div>
+  </section>
+  <script>
+    function enterGallery() {
+      document.getElementById('entryPage').style.display = 'none';
+      document.getElementById('galleryPage').classList.add('active');
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8f456a568d74d8',t:'MTc2NDg5MjkwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>    }
+
+    /* صفحة الدخول */
+    .entry-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .entry-page h1 {
+      font-size: 64px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      animation: fadeInDown 1s ease;
+    }
+
+    .entry-page p {
+      font-size: 24px;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease 0.3s backwards;
+    }
+
+    .enter-btn {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border: none;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease 0.6s backwards;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245, 87, 108, 0.6);
+    }
+
+    /* صفحة المعرض */
+    .gallery-page {
+      display: none;
+      padding: 40px 20px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .gallery-page.active {
+      display: block;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .gallery-header h1 {
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-header p {
+      font-size: 20px;
+      color: #e0e0e0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .image-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease backwards;
+    }
+
+    .image-card:nth-child(1) { animation-delay: 0.1s; }
+    .image-card:nth-child(2) { animation-delay: 0.2s; }
+    .image-card:nth-child(3) { animation-delay: 0.3s; }
+    .image-card:nth-child(4) { animation-delay: 0.4s; }
+    .image-card:nth-child(5) { animation-delay: 0.5s; }
+    .image-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .image-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-card:nth-child(2) .image-wrapper {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .image-card:nth-child(3) .image-wrapper {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .image-card:nth-child(4) .image-wrapper {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+
+    .image-card:nth-child(5) .image-wrapper {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    }
+
+    .image-card:nth-child(6) .image-wrapper {
+      background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    }
+
+    svg {
+      width: 70%;
+      height: 70%;
+    }
+
+    .image-caption {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-caption h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* الموبايل */
+    @media (max-width: 768px) {
+      .entry-page h1 {
+        font-size: 42px;
+      }
+
+      .entry-page p {
+        font-size: 18px;
+      }
+
+      .enter-btn {
+        padding: 15px 40px;
+        font-size: 20px;
+      }
+
+      .gallery-header h1 {
+        font-size: 36px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- صفحة الدخول -->
+  <main class="entry-page" id="entryPage">
+   <h1>🚗 معرض الديلر 🚗</h1>
+   <p>مرحباً بك في معرضنا المميز</p><button class="enter-btn" onclick="enterGallery()">ادخل للمعرض ←</button>
+  </main><!-- صفحة المعرض -->
+  <section class="gallery-page" id="galleryPage">
+   <header class="gallery-header">
+    <h1>معرض الصور</h1>
+    <p>استمتع بمشاهدة مجموعتنا المميزة</p>
+   </header>
+   <div class="gallery-grid"><!-- صورة 1 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="70" width="120" height="60" rx="30" fill="#FFD700" /> <circle cx="70" cy="90" r="12" fill="#333" /> <circle cx="130" cy="90" r="12" fill="#333" /> <path d="M 75 110 Q 100 125 125 110" stroke="#333" stroke-width="3" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 1</h3>
+      <p>تصميم احترافي وجذاب</p>
+     </div>
+    </article><!-- صورة 2 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><polygon points="100,30 40,170 160,170" fill="#FF6B6B" /> <circle cx="85" cy="110" r="8" fill="white" /> <circle cx="115" cy="110" r="8" fill="white" /> <path d="M 80 135 Q 100 145 120 135" stroke="white" stroke-width="3" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 2</h3>
+      <p>ألوان زاهية وجميلة</p>
+     </div>
+    </article><!-- صورة 3 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="70" fill="#4ECDC4" /> <circle cx="80" cy="90" r="10" fill="#1A535C" /> <circle cx="120" cy="90" r="10" fill="#1A535C" /> <ellipse cx="100" cy="120" rx="25" ry="15" fill="#1A535C" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 3</h3>
+      <p>تصميم عصري وحديث</p>
+     </div>
+    </article><!-- صورة 4 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="60" width="80" height="80" rx="15" fill="#95E1D3" /> <circle cx="85" cy="90" r="8" fill="#2C3E50" /> <circle cx="115" cy="90" r="8" fill="#2C3E50" /> <rect x="90" y="110" width="20" height="15" fill="#F38181" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 4</h3>
+      <p>إبداع وابتكار</p>
+     </div>
+    </article><!-- صورة 5 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 40 L 130 80 L 180 90 L 140 130 L 150 180 L 100 155 L 50 180 L 60 130 L 20 90 L 70 80 Z" fill="#FFC107" /> <circle cx="100" cy="95" r="25" fill="#FF5722" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 5</h3>
+      <p>تميز وجودة عالية</p>
+     </div>
+    </article><!-- صورة 6 -->
+    <article class="image-card">
+     <div class="image-wrapper">
+      <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="110" rx="60" ry="70" fill="#9B59B6" /> <circle cx="85" cy="95" r="10" fill="white" /> <circle cx="115" cy="95" r="10" fill="white" /> <circle cx="85" cy="95" r="5" fill="#34495E" /> <circle cx="115" cy="95" r="5" fill="#34495E" /> <path d="M 80 125 Q 100 140 120 125" stroke="white" stroke-width="4" fill="none" />
+      </svg>
+     </div>
+     <div class="image-caption">
+      <h3>صورة مميزة 6</h3>
+      <p>روعة في التصميم</p>
+     </div>
+    </article>
+   </div>
+  </section>
+  <script>
+    function enterGallery() {
+      document.getElementById('entryPage').style.display = 'none';
+      document.getElementById('galleryPage').classList.add('active');
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8f456a568d74d8',t:'MTc2NDg5MjkwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
